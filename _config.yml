@@ -1,0 +1,214 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
+title: 杯水·筆記
+subtitle: '人心惟危，道心惟微；<br />惟精惟一，允執厥中。'
+description: '一切賢聖皆以無為法而有差別。'
+keywords: '哲學, 氣功, 程式, 中醫, 旅行'
+author: 誰是一木
+language: 
+  - zh-Hant
+  - zh-Hans
+  - en
+timezone: 'Asia/Taipei'
+
+# URL
+## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
+#url: http://example.com
+url: https://blog.0fw.net
+#permalink: :year/:month/:day/:title/
+permalink: Writing/:month/:day/:title.html
+permalink_defaults:
+  lang: zh-Hant
+pretty_urls:
+  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
+  trailing_html: true # Set to false to remove trailing '.html' from permalinks
+
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+# Writing
+#new_post_name: :title.md # File name of new posts
+new_post_name: :lang/:year-:month-:day-:title.md
+default_layout: post
+titlecase: false # Transform title into titlecase
+external_link:
+  enable: true # Open external links in new tab
+  field: site # Apply to the whole site
+  exclude: ''
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: false
+  tab_replace: ''
+  wrap: true
+  hljs: false
+prismjs:
+  enable: false
+  preprocess: true
+  line_number: true
+  tab_replace: ''
+
+# Home page setting
+# path: Root path for your blogs index page. (default = '')
+# per_page: Posts displayed per page. (0 = disable pagination)
+# order_by: Posts order. (Order by date descending by default)
+index_generator:
+  path: ''
+  per_page: 12
+  order_by: -date
+
+# Category & Tag
+default_category: uncategorized
+category_map:
+  美文: Abstracts
+  雜七雜八: Assorted
+  書單: Book list
+  中國: China
+  剪貼博: Clipboard
+  資料: Data
+  開示: Discovery
+  嵌入式系統: Embedded System
+  功法: Kung Fu
+  功理: Kung Fu principle
+  機械鍵盤: Mechanical Keyboard
+  機車: Motorcycle
+  音樂: Music
+  其它: Other
+  哲學: Philosophy
+  政治: Political
+  閱讀: Read
+  共產襠國: Red Bandit Area
+  中華民國: Republic Of China
+  軟件: Software
+  標準化文檔: Standard document
+  經文: Sutra
+  技術: Technology
+  影視劇: TV Play
+  智能氣功: Zhi Neng Qigong
+tag_map:
+  二十件事: 20 Events
+  美劇: American TV
+  安卓: Android
+  百度: Baidu
+  書單: Book list
+  佛法: Buddhadharma
+  憲法: Constitution
+  儒學: Confucianism
+  排版: Copywriting
+  光纖貓: Fiber Cat
+  函數式編程: Functional programming
+  生日快樂: Happy birthday
+  勵志: Inspirational
+  了凡四訓: Liao Fan s Four Lessons
+  人生規劃: Life Planning
+  愛情: Love
+  機械鍵盤: Mechanical Keyboard
+  國殤日: National Mourning Day
+  八正道: Noble Eightfold Path
+  開示: Opening and Showing
+  操作系統: Operating system
+  捧氣貫頂法: Peng Qi Guan Ding Fa
+  編程: Programming
+  心理學: Psychology
+  提問: Questions
+  三心並站樁: San Xin Bing Zhan Zhuang
+  軟件: Software
+  演講: Speech
+  心靈雞湯: Spiritual Chicken Soup
+  修行: Spiritual practice
+  直男: Straight man
+  氣質: Temperament
+  道藏: Treasury of Tao
+  小米: Xiaomi
+  智能氣功: Zhi Neng Qigong
+
+# Metadata elements
+## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
+meta_generator: true
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+## updated_option supports 'mtime', 'date', 'empty'
+updated_option: 'mtime'
+
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 18
+pagination_dir: page
+
+# Include / Exclude file(s)
+## include:/exclude: options only apply to the 'source/' folder
+include:
+exclude:
+ignore:
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+#theme: landscape
+theme: theme-next-8
+
+# hexo-generator-sitemap
+sitemap:
+  path: sitemap.xml
+  #template: ./sitemap_template.xml
+  rel: false
+  tags: false
+  categories: false
+
+# hexo-generator-feed
+feed:
+  # Generate both atom and rss2 feeds
+  type:
+    - atom
+    - rss2
+  path:
+    - atom.xml
+    - rss2.xml
+
+# hexo-filter-nofollow
+nofollow:
+  enable: true
+  field: post
+  exclude:
+    #- 'exclude1.com'
+    #- 'exclude2.com'
+
+# hexo-deployer-git
+deploy:
+  - type: git
+    #repo: git@github.com:<username>/<username>.github.io.git
+    repo: git@github.com:Open343/open343.github.io.git
+    branch: master
+  - type: git
+    #repo: git@github.com:<username>/<username>.github.io.git
+    repo: git@github.com:Open343/open343.github.io.git
+    branch: src
+    extend_dirs: /
+    ignore_hidden: false
+    ignore_pattern:
+        public: .
+
+# Deployment
+## Docs: https://hexo.io/docs/one-command-deployment
+#deploy:
+#  type: ''
