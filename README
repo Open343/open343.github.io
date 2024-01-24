@@ -1,0 +1,29 @@
+博客日誌
+
+建站程序
+  hexo with next
+
+思路
+
+new_post_name: :lang/:year-:month-:day-:title-:abbrlink.md
+permalink: Writing/:year/:title.html
+
+插件
+
+@byronwan/hexo-renderer-markdown-it-katex
+hexo
+hexo-abbrlink
+hexo-deployer-git
+hexo-filter-nofollow
+hexo-generator-archive
+hexo-generator-category
+hexo-generator-feed
+hexo-generator-index
+hexo-generator-sitemap
+hexo-generator-tag
+hexo-renderer-ejs
+hexo-renderer-stylus
+hexo-server
+hexo-theme-landscape
+markdown-it-kbd
+markdown-it-merge-cells
